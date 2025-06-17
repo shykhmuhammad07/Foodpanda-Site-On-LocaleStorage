@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites - Food Delivery</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <div class="notification" id="notification">
+      Form submitted successfully! Redirecting to dashboard...
+    </div>
+
+    <div class="container" id="auth-container">
+      <div class="welcome-section">
+        <div class="food-icons">
+          <i
+            class="fas fa-pizza-slice food-icon"
+            style="top: 10%; left: 20%"
+          ></i>
+          <i class="fas fa-hamburger food-icon" style="top: 30%; left: 70%"></i>
+          <i class="fas fa-ice-cream food-icon" style="top: 60%; left: 40%"></i>
+          <i class="fas fa-coffee food-icon" style="top: 75%; left: 15%"></i>
+          <i
+            class="fas fa-drumstick-bite food-icon"
+            style="top: 40%; left: 30%"
+          ></i>
+          <i class="fas fa-cookie food-icon" style="top: 20%; left: 50%"></i>
+          <i class="fas fa-cake food-icon" style="top: 65%; left: 75%"></i>
+        </div>
+
+        <div class="welcome-content">
+          <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <span>Foodpanda</span>
+          </div>
+          <h1>Delicious Food Delivered Fast!</h1>
+          <p>
+            Order from your favorite restaurants and get food delivered right to
+            your doorstep. Login to access exclusive deals and discounts!
+          </p>
+          <div class="food-illustration">
+            <i class="fas fa-motorcycle fa-3x" style="color: #ffd166"></i>
+          </div>
+        </div>
+        <div class="food-bg"></div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-header">
+          <h2>Welcome to Foodpanda</h2>
+          <p>Sign in or create an account to continue</p>
+          <div class="form-toggle">
+            <button class="toggle-btn active" id="login-toggle">Login</button>
+            <button class="toggle-btn" id="signup-toggle">Sign Up</button>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form class="form active" id="login-form">
+            <div class="input-group">
+              <label for="login-email"
+                ><i class="fas fa-envelope"></i> Email Address</label
+              >
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="login-password"
+                ><i class="fas fa-lock"></i> Password</label
+              >
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="user-type">
+              <div class="user-option" data-type="admin">
+                <i class="fas fa-user-shield"></i>
+                <div>Restaurant Admin</div>
+              </div>
+              <div class="user-option" data-type="customer">
+                <i class="fas fa-user"></i>
+                <div>Customer</div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Login to Foodpanda</button>
+          </form>
+
+          <form class="form" id="signup-form">
+            <div class="input-group">
+              <label for="signup-name"
+                ><i class="fas fa-user"></i> Full Name</label
+              >
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="signup-name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="signup-email"
+                ><i class="fas fa-envelope"></i> Email Address</label
+              >
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                id="signup-email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="signup-password"
+                ><i class="fas fa-lock"></i> Password</label
+              >
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="signup-password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="signup-confirm"
+                ><i class="fas fa-lock"></i> Confirm Password</label
+              >
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="signup-confirm"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+
+            <div class="user-type">
+              <div class="user-option" data-type="admin">
+                <i class="fas fa-user-shield"></i>
+                <div>Restaurant Admin</div>
+              </div>
+              <div class="user-option" data-type="customer">
+                <i class="fas fa-user"></i>
+                <div>Customer</div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodPanda - Customer Dashboard</title>
+  <link rel="stylesheet" href="customer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <i class="fas fa-pizza-slice"></i> FoodPanda
+    </div>
+    <div class="dashboard">
+      <div class="welcome">Dashboard Overview</div>
+    </div> 
+    <div class="user-section">
+      <div class="user-info"></i>
+        <p id="users">Admin User</p>
+      </div>
+      <button class="logout-btn">
+        <a href="./index.html"><i class="fas fa-sign-out-alt"></i> Log Out </a>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Popular Menu Items</h1>
+
+    <div class="main" id="menuContainer">
+      <div class="card">
+        <div class="new-badge">NEW</div>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Pizza" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">CHEESE LOVER'S PIZZA</h5>
+          <p class="card-text">Loaded with mozzarella, cheddar, parmesan and our signature sauce</p>
+          <div class="price-tag">
+            <div class="price">1200</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="1" data-name="Cheese Pizza" data-price="1200"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Mutton Karahi" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">MUTTON KARAHI</h5>
+          <p class="card-text">Tender mutton cooked with tomatoes, ginger, garlic and traditional spices</p>
+          <div class="price-tag">
+            <div class="price">1500</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="2" data-name="Mutton Karahi" data-price="1500"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="new-badge">BESTSELLER</div>
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Burger" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">ZINGER BURGER</h5>
+          <p class="card-text">Crispy chicken fillet with fresh lettuce, mayo and our special sauce</p>
+          <div class="price-tag">
+            <div class="price">550</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="3" data-name="Zinger Burger" data-price="550"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/666553456/photo/chicken-tikka-jalfrezi-indian-food.jpg?s=612x612&w=0&k=20&c=BBvn4kLOWMQzYhECo8f3m1QnPWIIJN44wn7afZReViY=" alt="Chicken Karahi" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">CHICKEN KARAHI</h5>
+          <p class="card-text">Juicy chicken pieces in a rich, spicy tomato gravy with fresh coriander</p>
+          <div class="price-tag">
+            <div class="price">900</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="4" data-name="Chicken Karahi" data-price="900"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Burger" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">CLASSIC BEEF BURGER</h5>
+          <p class="card-text">100% beef patty with cheese, onion, pickles and special sauce</p>
+          <div class="price-tag">
+            <div class="price">400</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="5" data-name="Beef Burger" data-price="400"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="new-badge">POPULAR</div>
+        <img src="https://images.unsplash.com/photo-1634034379073-f689b460a3fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="French Fries" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">CRISPY FRIES</h5>
+          <p class="card-text">Golden fries with a crispy exterior and fluffy interior, lightly salted</p>
+          <div class="price-tag">
+            <div class="price">100</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="6" data-name="Crispy Fries" data-price="100"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Pasta" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">CREAMY PASTA</h5>
+          <p class="card-text">Fettuccine in a rich Alfredo sauce with mushrooms and parmesan</p>
+          <div class="price-tag">
+            <div class="price">750</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="7" data-name="Creamy Pasta" data-price="750"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.momsdish.com/wp-content/uploads/2019/05/Garden-Salad-05.jpg" alt="Salad" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">GARDEN SALAD</h5>
+          <p class="card-text">Fresh greens with cherry tomatoes, cucumber, olives and vinaigrette</p>
+          <div class="price-tag">
+            <div class="price">350</div>
+          </div>
+          <a href="#" class="btn add-to-cart" data-id="8" data-name="Garden Salad" data-price="350"><i class="fas fa-shopping-cart"></i> ADD TO CART</a>
+        </div>
+
+        <div id="card">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cart-btn" id="cartButton">
+    <i class="fas fa-shopping-cart"></i>
+    <div class="cart-count" id="cartCount">0</div>
+  </div>
+  
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+        <button class="close-cart" id="closeCart">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">Your cart is empty</div>
+      </div>
+      <div class="cart-total">
+        Total: Rs <span id="cartTotal">0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+  
+  <div class="toast" id="toast">Item added to cart!</div>
+  
+  <div class="order-confirmation" id="orderConfirmation">
+    <div class="confirmation-content">
+      <h2><i class="fas fa-check-circle"></i> Order Confirmed!</h2>
+      <p>Your order has been placed successfully.</p>
+      
+      <div class="order-details">
+        <h3>Order Summary</h3>
+        <div id="orderItems"></div>
+        <div class="order-total">Total: Rs <span id="orderTotal">0</span></div>
+      </div>
+      
+      <button class="confirmation-btn" id="closeConfirmation">Continue Shopping</button>
+    </div>
+  </div>
+  <script src="customer.js"></script>
+</body>
+</html>

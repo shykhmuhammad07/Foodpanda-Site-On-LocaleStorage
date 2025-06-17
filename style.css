@@ -1,0 +1,978 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-pink: #e21b70;
+  --secondary-pink: #ff2b85;
+  --light-pink: #fff0f5;
+  --dark-pink: #c8003a;
+  --text-dark: #333;
+  --text-light: #555;
+  --bg-light: #f8f8f8;
+  --white: #ffffff;
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.navbar {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-pink);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  background: none;
+  border: 2px solid var(--primary-pink);
+  color: var(--primary-pink);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-pink);
+  color: var(--white);
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  background-color: var(--primary-pink);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-pink);
+}
+
+.icon {
+  font-size: 20px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: var(--primary-pink);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 60px;
+  background: linear-gradient(135deg, var(--light-pink) 0%, var(--white) 100%);
+  position: relative;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  color: var(--primary-pink);
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.container-1 {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 40px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-pink);
+  border-radius: 2px;
+}
+
+.main-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 30px;
+  margin: 30px 0;
+}
+
+.card-1 {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 36px rgba(226, 27, 112, 0.15);
+}
+
+.card-1 img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-1:hover img {
+  transform: scale(1.03);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: lightgray;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 6px 0px 0px 12px;
+ 
+}
+
+.card-text {
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-light);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 0px 0px 10px 10px;
+  padding: 10px 22px;
+  background-color: var(--primary-pink);
+  color: var(--white);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--dark-pink);
+  transform: scale(1.05);
+}
+
+
+.zero-section {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 80px 0;
+  overflow: visible;
+}
+
+
+.zero-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+}
+
+.zero-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: var(--shadow);
+  text-align: center;
+  line-height: 1.8rem;
+  z-index: 10;
+  border: 3px solid var(--primary-pink);
+}
+
+.zero-card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-pink);
+}
+
+.zero-card p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.zero-card button {
+  font-size: 1rem;
+  background-color: var(--primary-pink);
+  color: var(--white);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.zero-card button:hover {
+  background-color: var(--dark-pink);
+  transform: scale(1.05);
+}
+
+/* Cities Section */
+.cities-section {
+  margin-top: 70px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--light-pink);
+  border-radius: 20px;
+  margin: 40px;
+}
+
+.city-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.city-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 200px;
+  height: 250px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(226, 27, 112, 0.2);
+}
+
+.city-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.city-label {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-pink);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h2 {
+  font-size: 26px;
+  color: var(--primary-pink);
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h4::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-pink);
+}
+
+.footer-section p {
+  color: #ccc;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-pink);
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-pink);
+  transform: translateY(-5px);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #444;
+  padding-top: 25px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .zero-card {
+    padding: 25px;
+  }
+
+  .city-card {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-1 {
+    gap: 20px;
+  }
+
+  .card-1 {
+    width: 100%;
+    max-width: 360px; /* was 250px */
+    margin: 0 auto;
+  }
+}
+
+.zero-card {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  margin: -50px auto 0;
+  width: 90%;
+}
+
+.zero-hero {
+  height: 300px;
+}
+
+.cities-section {
+  margin: 40px 20px;
+}
+
+.city-grid {
+  gap: 20px;
+}
+
+.city-card {
+  width: 160px;
+  height: 200px;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-buttons {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .main-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1 {
+    width: 90%;
+    max-width: 340px; /* bigger max */
+  }
+
+  .card-1 img {
+    height: 220px; /* slightly taller image */
+  }
+
+  .city-card {
+    width: 140px;
+    height: 180px;
+  }
+
+  .city-label {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  max-width: 600px;
+  margin: 30px auto 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(226, 27, 112, 0.2);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 15px 25px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 15px 30px;
+  background-color: var(--primary-pink);
+  color: var(--white);
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: var(--dark-pink);
+}
+
+/* Floating Order Button */
+.floating-order-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-pink);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(226, 27, 112, 0.4);
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.floating-order-btn:hover {
+  background-color: var(--dark-pink);
+  transform: scale(1.1);
+}
+
+/* Additional Responsive Tweaks */
+
+/* Make navbar items wrap nicely on very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 15px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+/* Hero image should scale down better */
+@media (max-width: 480px) {
+  .hero-img img {
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+/* Cards stack vertically on smaller screens */
+@media (max-width: 576px) {
+  .main-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1 {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+/* City cards better on very small screens */
+@media (max-width: 400px) {
+  .city-card {
+    width: 120px;
+    height: 160px;
+  }
+
+  .city-label {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+/* Footer stacking on small devices */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    min-width: unset;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .container-1 {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-img img {
+    max-width: 90%;
+  }
+
+  .zero-card {
+    padding: 25px;
+  }
+
+  .city-card {
+    width: 180px;
+    height: 220px;
+  }
+
+  .footer-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .main-1 {
+    gap: 20px;
+  }
+
+  .card-1 {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .zero-card {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: -50px auto 0;
+    width: 90%;
+  }
+
+  .zero-hero {
+    height: 300px;
+  }
+
+  .cities-section {
+    margin: 40px 20px;
+  }
+
+  .city-grid {
+    gap: 25px;
+  }
+
+  .city-card {
+    width: 180px;
+    height: 200px;
+  }
+
+  .search-container {
+    max-width: 90%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-between;
+  }
+
+  .card-1 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .city-card {
+    width: 140px;
+    height: 180px;
+  }
+
+  .city-label {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    border-radius: 30px;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .search-container input {
+    border-radius: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(226, 27, 112, 0.2);
+  }
+
+  .search-container button {
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  .floating-order-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .city-grid {
+    gap: 26px;
+  }
+
+  .city-card {
+    width: 150px;
+    height: 200px;
+  }
+
+  .zero-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .zero-card p {
+    font-size: 1rem;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .city-card {
+    width: 120px;
+    height: 160px;
+  }
+
+  .city-label {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .search-container input {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

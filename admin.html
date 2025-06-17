@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-pizza-slice"></i> FoodPanda
+    </div>
+    <div class="center-link">
+      <a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
+    </div>
+    <div class="right-link">
+      <div class="user-info">
+        <i class="fas fa-user-circle"></i>
+        <p id="user">Admin User</p>
+      </div>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <div class="divider"></div>
+
+  <div class="main-content">
+    <form id="productForm">
+      <div class="form-group">
+        <label for="getName">Item Name</label>
+        <input type="text" id="getName" placeholder="Margherita Pizza" required>
+      </div>
+      <div class="form-group">
+        <label for="geturl">Image URL</label>
+        <input type="text" id="geturl" placeholder="https://example.com/pizza.jpg" required>
+      </div>
+      <div class="form-group">
+        <label for="getdesc">Description</label>
+        <input type="text" id="getdesc" placeholder="Tasty & cheesy..." required>
+      </div>
+      <div class="form-group">
+        <label for="getprice">Price </label>
+        <input type="text" id="getprice" placeholder="12.99" required>
+      </div>
+      <button type="submit" class="submit-btn">
+        <i class="fas fa-plus-circle"></i> Add Product
+      </button>
+    </form>
+
+    <div class="products-header">
+      <h3><i class="fas fa-list"></i> Product List</h3>
+    </div>
+
+    <div id="dov"></div>
+  </div>
+
+  <div class="notification" id="notification">
+    <i class="fas fa-check-circle"></i>
+    <span>Product added successfully!</span>
+  </div>
+<script src="admin.js"></script>
+  
+</body>
+</html>

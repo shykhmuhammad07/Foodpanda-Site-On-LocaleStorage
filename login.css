@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff7eb9, #ff758c);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  color: #ff2e63;
+  font-weight: 500;
+  transform: translateX(150%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  max-width: 350px;
+  width: 90%;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.welcome-section {
+  flex: 1;
+  min-width: 300px;
+  background: linear-gradient(to bottom right, #ff5e8d, #ff2e63);
+  color: white;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.food-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 0;
+  display: none; /* Optimized for mobile */
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.logo i {
+  margin-right: 10px;
+  color: #ffd166;
+}
+
+.welcome-content h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.welcome-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding: 0 10px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 30px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-header h2 {
+  color: #ff2e63;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.form-toggle {
+  display: flex;
+  background: #fff0f5;
+  border-radius: 30px;
+  border: 1px solid #ffd1dc;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff5e8d;
+  font-size: 0.95rem;
+}
+
+.toggle-btn.active {
+  background: #ff2e63;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+}
+
+.form.active {
+  display: flex;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #ff5e8d;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 13px 13px 13px 38px;
+  border: 2px solid #ffe4e9;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.input-group input:focus {
+  border-color: #ff2e63;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 46, 99, 0.2);
+}
+
+.input-group i {
+  position: absolute;
+  left: 13px;
+  top: 39px;
+  color: #ff5e8d;
+  font-size: 18px;
+}
+
+.user-type {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.user-option {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 14px 10px;
+  border: 2px solid #ffe4e9;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.user-option.selected {
+  background: #ffeef1;
+  border-color: #ff2e63;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #ff5e8d, #ff2e63);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+@media (max-width: 900px) {
+  .container {
+    max-width: 700px;
+  }
+  
+  .welcome-section {
+    padding: 35px 20px;
+  }
+  
+  .form-section {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  
+  .welcome-section {
+    padding: 30px 20px;
+  }
+  
+  .logo {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-content h1 {
+    font-size: 1.7rem;
+  }
+  
+  .form-section {
+    padding: 30px 25px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .input-group input {
+    padding: 12px 12px 12px 36px;
+  }
+  
+  .input-group i {
+    top: 37px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+    display: block;
+    min-height: auto;
+  }
+  
+  .notification {
+    top: 10px;
+    right: 10px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    margin: 15px auto;
+    border-radius: 12px;
+  }
+  
+  .welcome-section {
+    padding: 25px 15px;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .welcome-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .welcome-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-section {
+    padding: 25px 20px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .toggle-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .input-group label {
+    font-size: 0.9rem;
+  }
+  
+  .input-group input {
+    font-size: 0.9rem;
+    padding: 11px 11px 11px 35px;
+  }
+  
+  .input-group i {
+    font-size: 16px;
+    left: 12px;
+    top: 35px;
+  }
+  
+  .user-option {
+    min-width: calc(50% - 10px);
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-content h1 {
+    font-size: 1.4rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .toggle-btn {
+    font-size: 0.85rem;
+    padding: 9px 6px;
+  }
+  
+  .user-option {
+    min-width: 100%;
+  }
+  
+  .input-group input {
+    padding: 10px 10px 10px 32px;
+  }
+  
+  .input-group i {
+    font-size: 15px;
+    left: 10px;
+    top: 33px;
+  }
+}
+
+@media (max-width: 360px) {
+  .welcome-content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .toggle-btn {
+    font-size: 0.8rem;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding: 10px 0;
+    display: block;
+  }
+  
+  .container {
+    margin: 10px auto;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+  
+  .welcome-section,
+  .form-section {
+    padding: 20px 15px;
+  }
+}
